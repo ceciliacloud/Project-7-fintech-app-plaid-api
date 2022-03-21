@@ -81,7 +81,6 @@ $ npm install
 $ brew install node
 ```
 
-
 - Next, initialize a new Amplify project. When prompted, press `Enter/Return` on your keyboard, to accept the default.
 
 ```bash
@@ -94,8 +93,11 @@ $ amplify init
 
 
 ? Enter a name for the project `awsplaiddemoapp`
+
 ? Initialize the project with the above configuration? (Y/n) `Y`
+
 ? Select the authentication profile you want to use: (Use arrow keys) `AWS profile` 
+
 ? Please choose the profile you want to use: (Use arrow keys) `default`
 
 _Your project has been successfully initialized and connected to the cloud!_
@@ -107,7 +109,9 @@ $ amplify add auth
 ```
 
 ? Do you want to use the default authentication configuration? `Default configuration`
+
 ? How do you want users to be able to sign in? (Use arrow keys and space bar to select) `Username`
+
 ? Do you want to configure advanced settings? `No, I am done`
 
 
@@ -121,18 +125,31 @@ $ amplify add api
 ```
 
 ? Please select from one of the below mentioned services: `REST`
+
 ? Provide a friendly name for your resource to be used as a label for this category in the project: `plaidtestapi`
+
 ? Provide a path (e.g., /book/{isbn}): `/v1`
+
 ? Choose a Lambda source: `Create a new Lambda function`
+
 ? Provide an AWS Lambda function name: `plaidaws`
+
 ? Choose the runtime that you want to use: `NodeJS`
+
 ? Choose the function template that you want to use: `Serverless ExpressJS function (Integration with API Gateway)`
+
 ? Do you want to configure advanced settings? `Yes`
+
 ? Do you want to access other resources in this project from your Lambda function? `No`
+
 ? Do you want to invoke this function on a recurring schedule? `No`
+
 ? Do you want to enable Lambda layers for this function? `No`
+
 ? Do you want to configure environment variables for this function? `Yes`
+
 ? Enter the environment variable name: `CLIENT_ID`
+
 ? Enter the environment variable value: `[Enter your Plaid client ID]`
 
 - The `Plaid client ID` can be located on the Plaid website. Navigate to your account dashboard and click `Team Settings` on the menu bar. In the drop down menu, click `Keys`.
@@ -144,15 +161,25 @@ $ amplify add api
 ![](./images/plaidkeys.png)
 
 ? Select what you want to do with environment variables: `Add new environment variable`
+
 ? Select the environment variable name: `TABLE_NAME`
+
 ? Enter the environment variable value: `plaidawsdb`
+
 ? Select what you want to do with environment variables: `I am done`
+
 ? Do you want to configure secret values this function can access? `Yes`
+
 ? Enter a secret name (this is the key used to look up the secret value): `PLAID_SECRET`
+
 ? Enter the value for PLAID_SECRET: `[Enter your Plaid sandbox API key - hidden]`
+
 ? What do you want to do? `I'm done`
+
 ? Do you want to edit the local lambda function now? `No`
+
 ? Restrict API access: `No`
+
 ? Do you want to add another path? `No`
 
 - Copy the Lambda source file and install dependencies, using the following commands:
@@ -183,7 +210,9 @@ $ amplify add storage
 ```
 
 ? Please select from one of the below mentioned services: `NoSQL Database`
+
 ? Please provide a friendly name for your resource that will be used to label this category in the project: `plaidtestdb`
+
 ? Please provide table name: `plaidawsdb`
 
 - At this point, you can now add columns to the table!
@@ -191,14 +220,23 @@ $ amplify add storage
 ![](./images/amplifyadds.png)
 
 ? What would you like to name this column: `id`
+
 ? Please choose the data type: `string`
+
 ? Would you like to add another column? `Yes`
+
 ? What would you like to name this column: `token`
+
 ? Please choose the data type: `string`
+
 ? Would you like to add another column? `No`
+
 ? Please choose partition key for the table: `id`
+
 ? Do you want to add a sort key to your table? `No`
+
 ? Do you want to add global secondary indexes to your table? `No`
+
 ? Do you want to add a Lambda Trigger for your Table? `No`
 
 - Great job! You have successfully added resource plaidtestdb locally!
@@ -219,9 +257,13 @@ $ amplify update function
 ![](./images/amplifyupdate.png)
 
 ? Which setting do you want to update? `Resource access permissions`
+
 ? Select the categories you want this function to have access to: `storage`
+
 ? Storage has 2 resources in this project. Select the one you would like your Lambda to access: `plaidawsdb`
+
 ? Select the operations you want to permit on plaidawsdb: `create, read, update, delete`
+
 ? Do you want to edit the local lambda function now? `No`
 
 ### Deploying the App
@@ -288,6 +330,7 @@ Let's test our newly created app!
 ![](./images/usergood.png)
 
 - After you have entered your credentials, you should see a `success` page! Click `continue` to access the bank and display the transactions.
+
 ![](./images/success.png) 
 
 ----------------------------------------------------------------------
