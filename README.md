@@ -276,6 +276,7 @@ $ amplify add hosting
 
 ? Select the plugin module to execute: `Hosting with Amplify Console (Managed host
 ing with custom domains, Continuous deployment)`
+
 ? Choose a type: `Manual deployment`
 
 ![](./images/amplifyaddh.png)
