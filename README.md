@@ -11,10 +11,7 @@ AWS Amplify will enable us to quickly build a serverless web app with the follow
 - [Amazon API Gateway](https://aws.amazon.com/api-gateway/)-based REST API
 - [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
 
-
 Plaid is a financial services company and that helps fintech providers connect users securely to their bank accounts. In other words, it acts as a secure proxy between a fintech app and a bank. Plaid has connected over 12,000 banks and financial institutions throughout the world.using a single API! Today over 5,500 fintech apps use Plaid’s API to enable their users to access their bank accounts.
-
-![](./images/plaid.png)
 
 Fintech apps like Plaid offer a wide range of finance and banking interactions to users. This includes anything from payments to lending to trading. The concept of _Open Finance_ has been growing in popularity across the world. As the name suggests, "Open Finance" is a data-sharing model that refers to greater access to customer data through fintech apps (third-party apps). This include such as mortgages, savings accounts, retirement accounts, bills, payroll data, and more.
 
